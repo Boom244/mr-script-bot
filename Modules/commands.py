@@ -65,7 +65,7 @@ async def toggle(message):
     
     # otherwise, show error
     else:
-        await functions.send_error(message.channel, "Role not found")
+        await functions.send_error(message.channel, "Role '" + role + "' not found.")
 
 
 async def lock(message):
@@ -133,4 +133,4 @@ async def derole(message):
             else:
                 await msg.edit(embed=discord.Embed(title="Success! 👍", description="All the gamejam participant roles have been removed.", colour = 0x0094FF))
     else:
-        await msg.edit(embed=discord.Embed(title="⚠️ No one has the gamejam particpant role.", colour = 0x0094FF))
+        await msg.edit(embed=discord.Embed(title="⚠️ No one has the gamejam participant role.", colour = 0x0094FF))
